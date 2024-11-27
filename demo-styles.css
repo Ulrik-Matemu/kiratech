@@ -1,0 +1,394 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #160c08;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0; 
+    z-index: 1000;
+    background-color: #160c08;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #ffc04c;
+    overflow: visible; /* Ensure parent overflow doesn't affect sticky */
+}
+
+label.logo {
+  color: #ffc04c;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #ffa500;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+#sun {
+    padding-left: 30px;
+    color: #ffa500;
+}
+
+a.active,
+a:hover {
+  color: #ffc04c;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 22px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  label.logo {
+    padding-left: 30px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Responsive media query code for small screen */
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+
+  label.logo {
+    font-size: 22px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #3c2115;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+   /* Dropdown styles for mobile */
+   .dropdown-content {
+    position: static;
+    display: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ffa500;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+}
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #ffc04c;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3c2115;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid #ffc04c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ffa500;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: #ffc04c;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.hero {
+  padding: 100px;
+  margin-top: 50px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.image-container {
+    width: 50%;
+}
+.round-top-image {
+overflow: hidden;
+width: 100%;
+border-top-left-radius: 220px;
+border-top-right-radius: 220px;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+border: 2px solid #ffc04c;
+}
+
+.heading-container {
+    padding: 100px 50px;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #ffc04c;
+}
+
+
+.heading-container p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffa500;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.heading-container a  {
+    font-size: 1.5rem;
+    background-color: #3c2115;
+    border-radius: 30px;
+    border: 1px solid #ffc04c;
+    padding: 10px 50px;
+    color: #ffc04c;
+}
+
+.heading-container a:hover {
+  background-color: #ffa500;
+  transition: 0.2s ease-in;
+  color: #3c2115;
+  border: #ffc04c;
+}
+
+
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px;
+  }
+    .hero-section {
+        display: block;
+    }
+    .round-top-image {
+       display: none;
+    }
+    .heading-container {
+        padding: 30px 5px;
+    }
+    .heading-container h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 2559px) {
+  .heading-container p, .heading-container a {
+    font-size: 2rem;
+  }
+  .round-top-image {
+    padding: 150px;
+    border-top-left-radius: 520px;
+border-top-right-radius: 520px;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+border: 2px solid #3c2115;
+  }
+}
+
+@media (min-width: 1919px) {
+  .hero {
+    padding: 150px;
+  }
+  .round-top-image {
+    .round-top-image {
+      padding: 150px;
+      border-top-left-radius: 520px;
+  border-top-right-radius: 520px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 2px solid #3c2115;
+    }
+  }
+}
+
+@media (min-width: 1439px) {
+  .hero {
+    padding: 150px;
+  }
+}
+
+.service {
+  background: url(background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+.service-container {
+  display: flex;
+  align-items: center;
+  margin: 5px 50px 50px 50px;
+}
+.service h2 {
+  font-size: 4rem;
+  color: #ffc04c;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+.details {
+  width: 50%;
+  font-size: 1.5rem;
+  color: #ffa500;
+  padding-right: 50px;
+  position: relative;
+  top: -100px;
+ 
+}
+.package-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.package-card {
+  border: 2px solid #eb6200;
+  width: 49%;
+  text-align: center;
+  line-height: 2;
+  padding: 50px;
+  background-color: #54372a;
+  color: #fff;
+}
+.package-card:hover {
+  border: 2px solid #ffc04c;
+  transition: 0.5s;
+}
+.package-card h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.package-card a button {
+  padding: 10px 50px;
+  margin-top: 50px;
+  background-color: #160c08;
+  color: #fff;
+  border: 0;
+}
+.package-card a button:hover {
+  background-color: #eb6200;
+  transition: 0.5s;
+}
+@media (max-width: 1023px) {
+  .service {
+    background: #160c08;
+  }
+  .service-container {
+    display: block;
+  }
+  .service h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 5px;
+  }
+  .service-container {
+    margin: 30px;
+  }
+  .details {
+    top: 0;
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+  .package-container {
+    display: block;
+    width: 100%;
+  }
+  .package-card {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+

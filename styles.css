@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+
+.hero {
+    background-color: aqua;
+}
+
+.service-section {
+    background-color: blue;
+}
+
+.plans-section {
+    display: flex;
+}
+
+.plan-1 {
+    padding: 200px;
+    background-color: red;
+}
+
+.plan-2 {
+    padding: 200px;
+    background-color: green;
+}
+
+.plan-3 {
+    padding: 200px;
+    background-color: yellow;
+}
+
+.testimonial-section {
+    background-color: gray;
+    color: white;
+}
+
+.testimonial-section h1 {
+    padding: 200px;
+    text-align: center;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer h1 {
+    padding: 200px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+}
+
+.special-products {
+    background-color: orange;
+    padding: 300px;
+}
+
+.order-modal {
+    background-color: orangered;
+    padding: 300px;
+}
