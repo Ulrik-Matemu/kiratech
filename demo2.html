@@ -46,6 +46,301 @@
             </ul>
           </nav>
     </div>
+    <style>
+    
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="2.jpg" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<style>
+  .categories-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .row {
+    display: flex;
+  }
+  .column {
+    width: 25%;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 10px;
+    height: auto;
+    margin: 15px;
+    padding: 30px;
+    text-align: center;
+  }
+  .column h3 {
+    font-weight: 300;
+    font-size: 17px;
+    color: #ffa500;
+  }
+  .column:hover {
+    border: 1.5px solid rgb(34, 34, 34);
+    transition: 0.5s;
+  }
+  .column i {
+    color: #ffc04c;
+  }
+  @media (max-width: 1000px) {
+    .row {
+      display: grid;
+    }
+    .column {
+      width: 90%;
+      padding: 10px;
+    }
+  }
+</style>
+<div class="categories-container">
+  <div class="row">
+    <div class="column">
+      <i class="fas fa-desktop"></i>
+      <h3>Computers & Spare Parts</h3>
+    </div>
+    <div class="column">
+      <i class="fas fa-code"></i>
+      <h3>Web Development & Maintenance</h3>
+    </div>
+    <div class="column">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>Shipping & <br>Logistics</h3>
+    </div>
+    <div class="column">
+      <i class="fas fa-tools"></i>
+      <h3>Technical <br>Support</h3>
+    </div>
+    <div class="column">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>Smartphones & Accessories</h3>
+    </div>
+    <div class="column">
+      <i class="fas fa-shipping-fast"></i>
+      <h3>CCTV & <br>Security</h3>
+    </div>
+  </div>
+</div>
+<style>
+  .special-product-order-form {
+    margin: 5px 15px ;
+    display: flex;
+  }
+
+  .order-form {
+    width: 49%;
+    margin: 5px;
+  }
+  .special-products {
+    width: 49%;
+    margin: 5px;
+  }
+  .product-card {
+    border: 1px solid rgb(17, 17, 17);
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .product-image {
+    padding: 50px 25px;
+  }
+  .product-image img {
+    width: 150px;
+  }
+  .product-details {
+    padding: 50px;
+  }
+  .product-details h4 {
+    line-height: 2;
+  }
+  .product-details p {
+    line-height: 1.5;
+  }
+  @media (max-width: 1000px) {
+    .special-product-order-form {
+      display: block;
+    }
+    .special-products {
+      width: 100%;
+    }
+    .product-image {
+      padding: 25px 10px;
+    }
+    .product-image img {
+      width: 75px;
+    }
+    .product-details {
+      padding: 20px 5px;
+    }
+  }
+</style>
+<div class="special-product-order-form">
+  <div class="special-products">
+    <h2 style="color: #ffc04c; text-align: center; line-height: 5;">Special Products</h2>
+    <div class="product-card" style="display: flex;">
+      <div class="product-image">
+        <img src="Jest.avif">
+      </div>
+      <div class="product-details">
+        <h4 style="color: white;">Jest App</h4>
+      <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+      <h4 style="color: #ffa500;">$750</h4>
+      </div>
+    </div>
+    <div class="product-card" style="display: flex;">
+      <div class="product-image">
+        <img src="WhatsApp Image 2024-11-24 at 14.40.32.jpeg">
+      </div>
+      <div class="product-details">
+        <h4 style="color: white;">Jest App</h4>
+      <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+      <h4 style="color: #ffa500;">$750</h4>
+      </div>
+    </div>
+    <div class="product-card" style="display: flex;">
+      <div class="product-image">
+        <img src="images (1).png">
+      </div>
+      <div class="product-details">
+        <h4 style="color: white;">Jest App</h4>
+      <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+      <h4 style="color: #ffa500">$750</h4>
+      </div>
+    </div>
+  </div>
+  <style>
+    .order-form h2 {
+      color: #ffc04c;
+      text-align: center;
+      line-height: 5;
+    }
+    .order-form form {
+      border: 1px solid rgb(17, 17, 17);
+      border-radius: 10px;
+      padding: 50px; 
+      display: block;
+    }
+    .order-form form label {
+      margin: 0 5px;
+      color: #ffc04c;
+    }
+    .order-form form input {
+      color: white;
+      margin-bottom: 50px;
+      background-color: black;
+      border-radius: 10px;
+      height: 30px;
+      border: 0.5px solid #ffc04c;
+    }
+    .order-form form button {
+      margin: 0 220px;
+      padding: 10px;
+      background-color: black;
+      border: 1px solid white;
+      border-radius: 10px;
+      color: #ffc04c;
+    }
+    .order-form form button:hover {
+      background-color: rgb(32, 32, 32);
+    }
+    @media (max-width: 1000px) {
+      .order-form {
+        width: 100%;
+        margin: 0;
+      }
+      .order-form form button {
+        margin: 0 120px;
+      }
+    }
+  </style>
+  <div class="order-form">
+    <h2>Make An Order</h2>
+    <form>
+      <label >Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <label>Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <label>Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <label>Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <label>Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <label>Product</label>
+      <input placeholder="iPhone, Samsung TV etc.">
+      <button>Submit Order</button>
+    </form>
+  </div>
+</div>
+
+<script>
+    let slideIndex = 0;
+                let slideInterval; // Store interval ID
+                showSlides(); // Call to start the slideshow automatically
+
+                // Manual navigation (Next or Previous button)
+                function plusSlides(n) {
+                    slideIndex += n;
+
+                    // Ensure the slideIndex wraps correctly
+                    let slides = document.getElementsByClassName("mySlides");
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    } else if (slideIndex < 1) {
+                        slideIndex = slides.length;
+                    }
+
+                    showSlides(); // Update the slide
+                    resetInterval(); // Reset the interval to prevent overlap
+                }
+
+
+                // Automatically show the slides every 4 seconds
+                function showSlides() {
+                    let slides = document.getElementsByClassName("mySlides");
+
+                    // Hide all slides
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+
+                    // Increment slideIndex for automatic transition
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                    }
+
+                    // Show the current slide
+                    slides[slideIndex - 1].style.display = "block";
+                }
+
+                // Start the slideshow interval
+                function startInterval() {
+                    slideInterval = setInterval(showSlides, 4000);
+                }
+
+                // Reset and restart the interval when the user manually changes slides
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    startInterval(); // Restart automatic slideshow after manual changes
+                }
+
+                // Initialize the interval when the script runs
+                startInterval();
+</script>
+
  
 </body>
 

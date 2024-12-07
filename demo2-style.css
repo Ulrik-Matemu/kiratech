@@ -20,7 +20,7 @@ nav {
     position: fixed;
     top: 0; 
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.986);
+    background-color: rgba(0, 0, 0, 0.966);
     height: 80px;
     width: 100%;
     border-bottom: 1px solid #ffc04c;
@@ -103,7 +103,7 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #3c2115;
+    background: black;
     top: 80px;
     left: -100%;
     text-align: center;
@@ -159,7 +159,7 @@ a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #3c2115;
+    background-color: black;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -185,117 +185,60 @@ a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 
-.hero {
-  padding: 100px;
-  margin-top: 50px;
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-top: 80px;
+  border-bottom: 1px solid rgb(15, 15, 15);
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-
-.image-container {
-    width: 50%;
-}
-.round-top-image {
-overflow: hidden;
-width: 100%;
-border-top-left-radius: 220px;
-border-top-right-radius: 220px;
-border-bottom-left-radius: 0;
-border-bottom-right-radius: 0;
-border: 2px solid #ffc04c;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.heading-container {
-    padding: 100px 50px;
-    font-size: 3.5rem;
-    line-height: 1;
-    color: #ffc04c;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
-
-.heading-container p {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #ffa500;
-    margin-left: 5px;
-    margin-bottom: 20px;
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-.heading-container a  {
-    font-size: 1.5rem;
-    background-color: #3c2115;
-    border-radius: 30px;
-    border: 1px solid #ffc04c;
-    padding: 10px 50px;
-    color: #ffc04c;
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
-.heading-container a:hover {
-  background-color: #ffa500;
-  transition: 0.2s ease-in;
-  color: #3c2115;
-  border: #ffc04c;
-}
-
-
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 40px;
-  }
-    .hero-section {
-        display: block;
-    }
-    .round-top-image {
-       display: none;
-    }
-    .heading-container {
-        padding: 30px 5px;
-    }
-    .heading-container h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (min-width: 2559px) {
-  .heading-container p, .heading-container a {
-    font-size: 2rem;
-  }
-  .round-top-image {
-    padding: 150px;
-    border-top-left-radius: 520px;
-border-top-right-radius: 520px;
-border-bottom-left-radius: 0;
-border-bottom-right-radius: 0;
-border: 2px solid #3c2115;
-  }
-}
-
-@media (min-width: 1919px) {
-  .hero {
-    padding: 150px;
-  }
-  .round-top-image {
-    .round-top-image {
-      padding: 150px;
-      border-top-left-radius: 520px;
-  border-top-right-radius: 520px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border: 2px solid #3c2115;
-    }
-  }
-}
-
-@media (min-width: 1439px) {
-  .hero {
-    padding: 150px;
-  }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
 
 
