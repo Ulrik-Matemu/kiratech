@@ -299,7 +299,7 @@ border: 2px solid #3c2115;
 }
 
 .service {
-  background: url(background.jpg);
+  background: url(../public/background.jpg);
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 50px;
