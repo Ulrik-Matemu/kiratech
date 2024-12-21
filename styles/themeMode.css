@@ -1,0 +1,30 @@
+/* styles.css */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Dark theme variables */
+  body.dark-theme {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+  }
+  

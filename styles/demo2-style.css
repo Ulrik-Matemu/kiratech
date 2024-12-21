@@ -1,6 +1,21 @@
 /* Google Fonts Link */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --background-color: #080808;
+  --cat-card-color: rgba(0, 0, 0, 0.7);
+  --cat-card-text-color: #ffa500;
+  --product-card-color: rgba(0, 0, 0, 0.616);
+  --product-text-color: white;
+  --cat-icon-color: #ffa500;
+}
+
+body:has(.switch__input:checked) {
+	background-color: hsl(var(--hue),10%,20%);
+	color: hsl(var(--hue),10%,90%);
+}
+
+
 * {
   padding: 0;
   margin: 0;
@@ -11,7 +26,19 @@
 
 body {
   font-family: "Quicksand", sans-serif;
-  background-color: black;
+  background-color: var(--background-color); /* Image layer */
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  --background-color: rgba(233, 229, 199, 0.98);
+  --cat-card-color: rgba(255, 255, 255, 0.884);
+  --cat-card-text-color: black;
+  --product-card-color: rgba(255, 253, 253, 0.87);
+  --product-text-color: black;
+  --cat-icon-color: #ffa500;
 }
 
 
@@ -20,11 +47,12 @@ nav {
     position: fixed;
     top: 0; 
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.966);
+    background-color: var(--background-color);
     height: 80px;
     width: 100%;
     border-bottom: 1px solid #ffc04c;
     overflow: visible; /* Ensure parent overflow doesn't affect sticky */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 label.logo {
@@ -52,6 +80,7 @@ nav ul li a {
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
+  font-weight: 600;
 }
 
 #sun {
@@ -103,7 +132,7 @@ a:hover {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: black;
+    background: var(--background-color);
     top: 80px;
     left: -100%;
     text-align: center;
@@ -126,12 +155,12 @@ a:hover {
 .dropdown-content a {
     color: #ffa500;
     padding: 10px;
-    background: rgba(0,0,0,0.2);
+    background: var(--background-color);
 }
 
   nav ul li {
     display: block;
-    margin: 50px 0;
+    margin: 30px 0;
     line-height: 30px;
   }
 
@@ -159,7 +188,7 @@ a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: var(--background-color);
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -196,6 +225,7 @@ img {vertical-align: middle;}
   margin: auto;
   margin-top: 80px;
   border-bottom: 1px solid rgb(15, 15, 15);
+  background-color: black;
 }
 
 
@@ -243,9 +273,62 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
-.special-product-order-form {
-  margin: 5px 15px ;
+
+/* Category Container */
+.categories-container {
+  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+.categories-container h1 {
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--cat-icon-color);
+}
+.row {
   display: flex;
+}
+.column {
+  width: 25%;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 10px;
+  height: auto;
+  margin: 15px;
+  padding: 30px;
+  text-align: center;
+  background-color: var(--cat-card-color);
+}
+.column h3 {
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--cat-card-text-color);
+}
+.column:hover {
+  border: 1.5px solid rgb(34, 34, 34);
+  transition: 0.5s;
+}
+.column i {
+  color: var(--cat-icon-color);
+}
+@media (max-width: 1000px) {
+  .row {
+    display: grid;
+  }
+  .column {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+
+/* Special Product & Order Form */
+.special-product-order-form {
+  margin: 5px 95px ;
+  display: flex;
+  
 }
 
 .order-form {
@@ -260,6 +343,7 @@ img {vertical-align: middle;}
   border: 1px solid rgb(17, 17, 17);
   margin-bottom: 20px;
   border-radius: 10px;
+  background-color: var(--product-card-color);
 }
 .product-image {
   padding: 50px 25px;
@@ -272,9 +356,13 @@ img {vertical-align: middle;}
 }
 .product-details h4 {
   line-height: 2;
+  color: var(--product-text-color);
 }
 .product-details p {
   line-height: 1.5;
+  color: var(--product-text-color);
+  font-weight: 400;
+
 }
 @media (max-width: 1000px) {
   .special-product-order-form {
@@ -313,26 +401,28 @@ background-color: #717171;
 }
 
 .order-form h2 {
-  color: #ffc04c;
   text-align: center;
   line-height: 5;
+  color: #ffa500;
 }
 .order-form form {
   border: 1px solid rgb(17, 17, 17);
   border-radius: 10px;
   padding: 50px; 
   display: block;
+  background-color: var(--product-card-color);
 }
 .order-form form label {
   margin: 0 5px;
-  color: #ffc04c;
+  color: var(--product-text-color);
   line-height: 2;
+  font-weight: 500;
 }
 .order-form form input {
   width: 100%;
   color: white;
   margin-bottom: 50px;
-  background-color: black;
+  background-color: var(--background-color);
   border-radius: 10px;
   height: 30px;
   border: 0.5px solid #ffc04c;

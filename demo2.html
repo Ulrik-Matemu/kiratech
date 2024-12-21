@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/expand.min.css">
 </head>
 
 <body>
@@ -42,7 +43,31 @@
                 </div>
             </li>
               <li><a href="#">Contact</a></li>
-              <li id="sun"><i class="fa fa-sun-o"></i></li>
+              <button
+              class="theme-toggle"
+              type="button"
+              title="Toggle theme"
+              aria-label="Toggle theme"
+              id="themeToggle"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                width="1.2em"
+                height="1.2em"
+                fill="#ffa500"
+                class="theme-toggle__expand"
+                viewBox="0 0 32 32"
+              >
+                <clipPath id="theme-toggle__expand__cutout">
+                  <path d="M0-11h25a1 1 0 0017 13v30H0Z" />
+                </clipPath>
+                <g clip-path="url(#theme-toggle__expand__cutout)">
+                  <circle cx="16" cy="16" r="8.4" />
+                  <path d="M18.3 3.2c0 1.3-1 2.3-2.3 2.3s-2.3-1-2.3-2.3S14.7.9 16 .9s2.3 1 2.3 2.3zm-4.6 25.6c0-1.3 1-2.3 2.3-2.3s2.3 1 2.3 2.3-1 2.3-2.3 2.3-2.3-1-2.3-2.3zm15.1-10.5c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zM3.2 13.7c1.3 0 2.3 1 2.3 2.3s-1 2.3-2.3 2.3S.9 17.3.9 16s1-2.3 2.3-2.3zm5.8-7C9 7.9 7.9 9 6.7 9S4.4 8 4.4 6.7s1-2.3 2.3-2.3S9 5.4 9 6.7zm16.3 21c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm2.4-21c0 1.3-1 2.3-2.3 2.3S23 7.9 23 6.7s1-2.3 2.3-2.3 2.4 1 2.4 2.3zM6.7 23C8 23 9 24 9 25.3s-1 2.3-2.3 2.3-2.3-1-2.3-2.3 1-2.3 2.3-2.3z" />
+                </g>
+              </svg>
+            </button>
             </ul>
           </nav>
     </div>
@@ -76,46 +101,10 @@
 </div>
 
 <style>
-  .categories-container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-  }
-  .row {
-    display: flex;
-  }
-  .column {
-    width: 25%;
-    border: 1px solid rgb(17, 17, 17);
-    border-radius: 10px;
-    height: auto;
-    margin: 15px;
-    padding: 30px;
-    text-align: center;
-  }
-  .column h3 {
-    font-weight: 300;
-    font-size: 17px;
-    color: #ffa500;
-  }
-  .column:hover {
-    border: 1.5px solid rgb(34, 34, 34);
-    transition: 0.5s;
-  }
-  .column i {
-    color: #ffc04c;
-  }
-  @media (max-width: 1000px) {
-    .row {
-      display: grid;
-    }
-    .column {
-      width: 90%;
-      padding: 10px;
-    }
-  }
+
 </style>
 <div class="categories-container">
+  <h1>Buy & Import From Industry Specialists.</h1>
   <div class="row">
     <div class="column">
       <i class="fas fa-desktop"></i>
@@ -146,15 +135,15 @@
 
 <div class="special-product-order-form">
   <div class="special-products">
-    <h2 style="color: #ffc04c; text-align: center; line-height: 5;">Special Products</h2>
+    <h2 style="color: #ffa500; text-align: center; line-height: 5;">Special Products</h2>
     <div class="product-slide1">
       <div class="product-card" style="display: flex;">
         <div class="product-image">
           <img src="public/Jest.avif">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -163,8 +152,8 @@
           <img src="public/WhatsApp Image 2024-11-24 at 14.40.32.jpeg">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest App</h4>
+        <p ">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -173,8 +162,8 @@
           <img src="public/images (1).png">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500">$750</h4>
         </div>
     </div>
@@ -185,8 +174,8 @@
           <img src="public/WhatsApp Image 2024-11-24 at 14.40.32.jpeg">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 2 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4>Jest 2 App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -195,8 +184,8 @@
           <img src="public/Jest.avif">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 2 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4>Jest 2 App</h4>
+        <p ">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -205,8 +194,8 @@
           <img src="public/images (1).png">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 2 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest 2 App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500">$750</h4>
         </div>
     </div>
@@ -217,8 +206,8 @@
           <img src="public/images (1).png">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 3 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest 3 App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -227,8 +216,8 @@
           <img src="public/WhatsApp Image 2024-11-24 at 14.40.32.jpeg">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 3 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest 3 App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500;">$750</h4>
         </div>
       </div>
@@ -237,8 +226,8 @@
           <img src="public/Jest.avif">
         </div>
         <div class="product-details">
-          <h4 style="color: white;">Jest 3 App</h4>
-        <p style="color: white;">This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
+          <h4 >Jest 3 App</h4>
+        <p >This is a best seller and a very strong tool for performing unit testing in Javascript.</p>
         <h4 style="color: #ffa500">$750</h4>
         </div>
     </div>
@@ -272,6 +261,7 @@
 
 <script src="js/heroSlide.js"></script>
 <script src="js/productSlide.js"></script>
+<script src="js/themeMode.js"></script>
 </body>
 
 </html>
