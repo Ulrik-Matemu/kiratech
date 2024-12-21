@@ -331,6 +331,12 @@ img {vertical-align: middle;}
   
 }
 
+@media (max-width: 768px) {
+  .special-product-order-form {
+    margin: 8px;
+  }
+}
+
 .order-form {
   width: 49%;
   margin: 5px;
